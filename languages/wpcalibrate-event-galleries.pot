@@ -1,0 +1,107 @@
+# Copyright (C) 2026 WPCalibrate
+# This file is distributed under the GPL-2.0-or-later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WPCalibrate Event Galleries 1.0.0\n"
+"Report-Msgid-Bugs-To: support@wpcalibrate.com\n"
+"Last-Translator: WPCalibrate <support@wpcalibrate.com>\n"
+"Language-Team: English <support@wpcalibrate.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-10-07T12:00:00+00:00\n"
+"PO-Revision-Date: 2026-10-07T12:00:00+00:00\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: wpcalibrate-event-galleries\n"
+
+#: wpcalibrate-event-galleries.php:112
+msgid "WPCalibrate Event Galleries cannot run:"
+msgstr ""
+
+#: wpcalibrate-event-galleries.php:116
+msgid "Requires PHP %1$s or higher (current: %2$s). "
+msgstr ""
+
+#: wpcalibrate-event-galleries.php:125
+msgid "Requires WordPress %1$s or higher (current: %2$s)."
+msgstr ""
+
+#: includes/class-post-type.php:48
+msgid "Event Galleries"
+msgstr ""
+
+#: includes/class-post-type.php:49
+msgid "Event Gallery"
+msgstr ""
+
+#: includes/class-post-type.php:54
+msgid "Add New Event Gallery"
+msgstr ""
+
+#: includes/class-post-type.php:62
+msgid "Event Cover Image"
+msgstr ""
+
+#: includes/class-gallery-renderer.php:64
+msgid "Event Gallery #%d not found or has been deleted."
+msgstr ""
+
+#: includes/class-gallery-renderer.php:143
+msgid "Load More Photos"
+msgstr ""
+
+#: includes/class-gallery-renderer.php:175
+msgid "Enlarge photo %d"
+msgstr ""
+
+#: includes/class-gallery-renderer.php:236
+msgid "Photo Lightbox"
+msgstr ""
+
+#: includes/class-gallery-renderer.php:243
+msgid "Download high-resolution photo"
+msgstr ""
+
+#: includes/class-gallery-renderer.php:246
+msgid "Close lightbox (Escape)"
+msgstr ""
+
+#: includes/class-gallery-renderer.php:253
+msgid "Previous photo (Left arrow)"
+msgstr ""
+
+#: includes/class-gallery-renderer.php:261
+msgid "Next photo (Right arrow)"
+msgstr ""
+
+#: includes/class-gallery-renderer.php:292
+msgid "This Event Gallery is Password Protected"
+msgstr ""
+
+#: includes/class-gallery-renderer.php:293
+msgid "Please enter the password below to view this event photo gallery."
+msgstr ""
+
+#: admin/class-menu.php:97
+msgid "Gallery Settings"
+msgstr ""
+
+#: admin/class-event-fields.php:53
+msgid "Event Details & Photo Gallery"
+msgstr ""
+
+#: admin/class-event-fields.php:63
+msgid "Gallery Display Overrides"
+msgstr ""
+
+#: admin/class-event-fields.php:88
+msgid "Event Date"
+msgstr ""
+
+#: admin/class-event-fields.php:101
+msgid "Event Location (Optional)"
+msgstr ""
+
+#: admin/class-event-fields.php:117
+msgid "Add Photos from Media Library"
+msgstr ""

@@ -1,0 +1,15 @@
+/**
+ * WPCalibrate Event Galleries - Frontend RTL Styles
+ *
+ * @package WPCalibrate\EventGalleries
+ */
+
+.wpcal-eg-meta-count {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.wpcal-eg-card-badge {
+    right: auto;
+    left: 10px;
+}

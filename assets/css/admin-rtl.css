@@ -1,0 +1,29 @@
+/**
+ * WPCalibrate Event Galleries - Admin RTL Styles
+ *
+ * @package WPCalibrate\EventGalleries
+ */
+
+.wpcalibrate-event-galleries-admin-wrap {
+    margin: 20px 2px 0 20px;
+}
+
+.wpcalibrate-specs-table th,
+.wpcalibrate-specs-table td {
+    text-align: right;
+}
+
+.wpcal-eg-photo-counter {
+    margin-left: 0;
+    margin-right: 8px;
+}
+
+.wpcal-eg-thumb-remove {
+    right: auto;
+    left: 4px;
+}
+
+.wpcal-eg-thumb-handle {
+    left: auto;
+    right: 4px;
+}

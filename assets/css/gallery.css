@@ -1,0 +1,626 @@
+/**
+ * WPCalibrate Event Galleries - Frontend Styles
+ *
+ * @package WPCalibrate\EventGalleries
+ */
+
+/* ==========================================================================
+   CSS Custom Properties & Container
+   ========================================================================== */
+.wpcal-eg-container {
+    --wpcal-cols-d: 3;
+    --wpcal-cols-t: 2;
+    --wpcal-cols-m: 1;
+    --wpcal-gap: 16px;
+    width: 100%;
+    margin: 2rem 0;
+    box-sizing: border-box;
+    font-family: inherit;
+}
+
+.wpcal-eg-container *,
+.wpcal-eg-container *::before,
+.wpcal-eg-container *::after {
+    box-sizing: inherit;
+}
+
+/* ==========================================================================
+   Event Metadata Bar
+   ========================================================================== */
+.wpcal-eg-meta-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 18px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    color: #475569;
+}
+
+.wpcal-eg-meta-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wpcal-eg-meta-item svg {
+    color: #3b82f6;
+    flex-shrink: 0;
+}
+
+.wpcal-eg-meta-count {
+    margin-left: auto;
+    font-weight: 600;
+    color: #1e293b;
+}
+
+/* ==========================================================================
+   Grid Layout
+   ========================================================================== */
+.wpcal-eg-layout-grid .wpcal-eg-grid {
+    display: grid;
+    grid-template-columns: repeat(var(--wpcal-cols-d, 3), 1fr);
+    gap: var(--wpcal-gap, 16px);
+}
+
+@media (max-width: 1024px) {
+    .wpcal-eg-layout-grid .wpcal-eg-grid {
+        grid-template-columns: repeat(var(--wpcal-cols-t, 2), 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .wpcal-eg-layout-grid .wpcal-eg-grid {
+        grid-template-columns: repeat(var(--wpcal-cols-m, 1), 1fr);
+    }
+}
+
+.wpcal-eg-layout-grid .wpcal-eg-img-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #f1f5f9;
+}
+
+.wpcal-eg-layout-grid .wpcal-eg-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================================================
+   Masonry Layout
+   ========================================================================== */
+.wpcal-eg-layout-masonry .wpcal-eg-grid {
+    column-count: var(--wpcal-cols-d, 3);
+    column-gap: var(--wpcal-gap, 16px);
+}
+
+@media (max-width: 1024px) {
+    .wpcal-eg-layout-masonry .wpcal-eg-grid {
+        column-count: var(--wpcal-cols-t, 2);
+    }
+}
+
+@media (max-width: 640px) {
+    .wpcal-eg-layout-masonry .wpcal-eg-grid {
+        column-count: var(--wpcal-cols-m, 1);
+    }
+}
+
+.wpcal-eg-layout-masonry .wpcal-eg-item {
+    break-inside: avoid;
+    margin-bottom: var(--wpcal-gap, 16px);
+}
+
+.wpcal-eg-layout-masonry .wpcal-eg-img-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 6px;
+    background: #f1f5f9;
+}
+
+.wpcal-eg-layout-masonry .wpcal-eg-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+/* ==========================================================================
+   Gallery Items & Hover Overlay
+   ========================================================================== */
+.wpcal-eg-item {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.wpcal-eg-thumbnail-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    outline: none;
+}
+
+.wpcal-eg-thumbnail-link:focus-visible .wpcal-eg-img-wrapper {
+    outline: 3px solid #2563eb;
+    outline-offset: 2px;
+}
+
+.wpcal-eg-thumbnail-link:hover .wpcal-eg-img {
+    transform: scale(1.04);
+}
+
+.wpcal-eg-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 23, 42, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.wpcal-eg-thumbnail-link:hover .wpcal-eg-overlay,
+.wpcal-eg-thumbnail-link:focus .wpcal-eg-overlay {
+    opacity: 1;
+}
+
+.wpcal-eg-zoom-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #0f172a;
+    border-radius: 50%;
+    transform: scale(0.85);
+    transition: transform 0.2s ease;
+}
+
+.wpcal-eg-thumbnail-link:hover .wpcal-eg-zoom-icon {
+    transform: scale(1);
+}
+
+.wpcal-eg-caption {
+    margin-top: 6px;
+    font-size: 0.85rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   Load More Button
+   ========================================================================== */
+.wpcal-eg-load-more-wrap {
+    text-align: center;
+    margin-top: 36px;
+}
+
+.wpcal-eg-btn-load-more {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 28px;
+    background: #0f172a;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+}
+
+.wpcal-eg-btn-load-more:hover {
+    background: #1e293b;
+    transform: translateY(-1px);
+}
+
+.wpcal-eg-btn-load-more:focus-visible {
+    outline: 2px solid #2563eb;
+    outline-offset: 2px;
+}
+
+.wpcal-eg-btn-load-more:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.wpcal-eg-btn-spinner {
+    display: none;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #ffffff;
+    border-radius: 50%;
+    animation: wpcal-spin 0.8s linear infinite;
+}
+
+.wpcal-eg-btn-load-more.wpcal-loading .wpcal-eg-btn-spinner {
+    display: inline-block;
+}
+
+/* ==========================================================================
+   Accessible Lightbox Modal
+   ========================================================================== */
+.wpcal-eg-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.wpcal-eg-lightbox-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 15, 25, 0.92);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.wpcal-eg-lightbox-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    max-width: 1400px;
+    padding: 16px 20px;
+    box-sizing: border-box;
+}
+
+.wpcal-eg-lightbox-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 48px;
+    color: #ffffff;
+}
+
+.wpcal-eg-lightbox-counter {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #cbd5e1;
+    letter-spacing: 0.5px;
+}
+
+.wpcal-eg-lightbox-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wpcal-eg-lightbox-btn {
+    background: rgba(255, 255, 255, 0.12);
+    border: none;
+    color: #ffffff;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    text-decoration: none;
+}
+
+.wpcal-eg-lightbox-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+}
+
+.wpcal-eg-lightbox-btn:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+}
+
+.wpcal-eg-lightbox-stage {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    padding: 10px 0;
+}
+
+.wpcal-eg-lightbox-nav-btn {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: #ffffff;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+    z-index: 10;
+    flex-shrink: 0;
+}
+
+.wpcal-eg-lightbox-nav-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.08);
+}
+
+.wpcal-eg-lightbox-nav-btn:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 2px;
+}
+
+.wpcal-eg-lightbox-media-wrap {
+    position: relative;
+    flex: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 16px;
+}
+
+.wpcal-eg-lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.wpcal-eg-lightbox-img.wpcal-loaded {
+    opacity: 1;
+}
+
+.wpcal-eg-lightbox-spinner {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    border-top-color: #38bdf8;
+    border-radius: 50%;
+    animation: wpcal-spin 0.8s linear infinite;
+    display: none;
+}
+
+.wpcal-eg-lightbox.wpcal-img-loading .wpcal-eg-lightbox-spinner {
+    display: block;
+}
+
+.wpcal-eg-lightbox-footer {
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.wpcal-eg-lightbox-caption {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    max-width: 800px;
+    line-height: 1.4;
+}
+
+/* ==========================================================================
+   Password Protected Card
+   ========================================================================== */
+.wpcal-eg-protected-wrap {
+    padding: 3rem 1.5rem;
+    text-align: center;
+}
+
+.wpcal-eg-protected-card {
+    max-width: 480px;
+    margin: 0 auto;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 2.5rem 2rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+.wpcal-eg-protected-icon {
+    color: #64748b;
+    margin-bottom: 1rem;
+}
+
+.wpcal-eg-protected-card h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1.35rem;
+    color: #0f172a;
+}
+
+.wpcal-eg-protected-card p {
+    color: #64748b;
+    margin: 0 0 1.5rem 0;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   Archive Grid & Cards
+   ========================================================================== */
+.wpcal-eg-archive-wrap {
+    width: 100%;
+    margin: 2rem 0;
+}
+
+.wpcal-eg-archive-header {
+    margin-bottom: 2rem;
+}
+
+.wpcal-eg-archive-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.wpcal-eg-archive-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.wpcal-eg-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.wpcal-eg-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.06);
+}
+
+.wpcal-eg-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.wpcal-eg-card-media {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: #f1f5f9;
+    overflow: hidden;
+}
+
+.wpcal-eg-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.wpcal-eg-card:hover .wpcal-eg-card-img {
+    transform: scale(1.04);
+}
+
+.wpcal-eg-card-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #94a3b8;
+}
+
+.wpcal-eg-card-badge {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: rgba(15, 23, 42, 0.85);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.3px;
+}
+
+.wpcal-eg-badge-locked {
+    background: rgba(185, 28, 28, 0.9);
+}
+
+.wpcal-eg-card-body {
+    padding: 16px 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.wpcal-eg-card-title {
+    margin: 0 0 10px 0;
+    font-size: 1.15rem;
+    color: #0f172a;
+    line-height: 1.35;
+}
+
+.wpcal-eg-card-meta {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.85rem;
+    color: #64748b;
+}
+
+.wpcal-eg-card-date,
+.wpcal-eg-card-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.wpcal-eg-card-meta svg {
+    color: #3b82f6;
+    flex-shrink: 0;
+}
+
+.wpcal-eg-pagination {
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+}
+
+.wpcal-eg-pagination .page-numbers {
+    padding: 8px 14px;
+    border: 1px solid #e2e8f0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.wpcal-eg-pagination .page-numbers.current {
+    background: #0f172a;
+    color: #ffffff;
+    border-color: #0f172a;
+}
+
+/* ==========================================================================
+   Animations & Keyframes
+   ========================================================================== */
+@keyframes wpcal-spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wpcal-eg-img,
+    .wpcal-eg-card,
+    .wpcal-eg-card-img,
+    .wpcal-eg-btn-load-more,
+    .wpcal-eg-lightbox-btn,
+    .wpcal-eg-lightbox-nav-btn {
+        transition: none !important;
+        transform: none !important;
+    }
+}

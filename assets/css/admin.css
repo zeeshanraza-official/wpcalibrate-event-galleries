@@ -1,0 +1,477 @@
+/**
+ * WPCalibrate Event Galleries - Admin Styles
+ *
+ * @package WPCalibrate\EventGalleries
+ */
+
+/* ==========================================================================
+   Header & Brand Wrapper
+   ========================================================================== */
+.wpcalibrate-event-galleries-admin-wrap {
+    max-width: 1200px;
+    margin: 20px 20px 0 2px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+.wpcalibrate-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 16px 24px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid #dcdcde;
+    margin-bottom: 20px;
+}
+
+.wpcalibrate-header-brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.wpcalibrate-logo {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
+}
+
+.wpcalibrate-title-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.wpcalibrate-title {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    color: #1d2327;
+    line-height: 1.2;
+}
+
+.wpcalibrate-version-badge {
+    background: #f0f0f1;
+    color: #50575e;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 12px;
+    border: 1px solid #c3c4c7;
+}
+
+.wpcalibrate-header-actions {
+    display: flex;
+    gap: 10px;
+}
+
+/* ==========================================================================
+   Tabs & Form Containers
+   ========================================================================== */
+.wpcalibrate-nav-tabs {
+    margin-bottom: 20px;
+    border-bottom: 1px solid #c3c4c7;
+}
+
+.wpcalibrate-section-card {
+    background: #ffffff;
+    border: 1px solid #c3c4c7;
+    border-radius: 8px;
+    padding: 24px 28px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.wpcalibrate-section-card h2 {
+    margin-top: 0;
+    margin-bottom: 6px;
+    font-size: 18px;
+    color: #1d2327;
+    font-weight: 600;
+}
+
+.wpcalibrate-section-desc {
+    color: #646970;
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.wpcalibrate-submit-bar {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #dcdcde;
+}
+
+/* ==========================================================================
+   Tables & Specs
+   ========================================================================== */
+.wpcalibrate-specs-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.wpcalibrate-specs-table th,
+.wpcalibrate-specs-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #f0f0f1;
+    text-align: left;
+    font-size: 14px;
+}
+
+.wpcalibrate-specs-table th {
+    width: 220px;
+    color: #1d2327;
+    font-weight: 600;
+}
+
+.wpcalibrate-info-box {
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin-top: 20px;
+}
+
+.wpcalibrate-info-box h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+
+/* ==========================================================================
+   Support Grid
+   ========================================================================== */
+.wpcalibrate-support-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
+    gap: 24px;
+}
+
+.wpcalibrate-contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0 0;
+}
+
+.wpcalibrate-contact-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.wpcalibrate-contact-list li:last-child {
+    border-bottom: none;
+}
+
+.wpcalibrate-contact-list .dashicons {
+    font-size: 22px;
+    width: 22px;
+    height: 22px;
+    color: #2271b1;
+    margin-top: 2px;
+}
+
+.wpcalibrate-faq-item {
+    margin-bottom: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.wpcalibrate-faq-item:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.wpcalibrate-faq-item h4 {
+    margin: 0 0 6px 0;
+    font-size: 14px;
+    color: #1d2327;
+}
+
+.wpcalibrate-faq-item p {
+    margin: 0;
+    color: #50575e;
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   Metabox: Event Details & Gallery Manager
+   ========================================================================== */
+.wpcal-eg-metabox-wrap {
+    padding: 6px 0;
+}
+
+.wpcal-eg-field-row {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 16px;
+    flex-wrap: wrap;
+}
+
+.wpcal-eg-field-col {
+    flex: 1;
+    min-width: 260px;
+}
+
+.wpcal-eg-label {
+    display: block;
+    margin-bottom: 6px;
+}
+
+.wpcal-eg-input {
+    width: 100%;
+}
+
+.wpcal-eg-separator {
+    border: 0;
+    border-top: 1px solid #dcdcde;
+    margin: 20px 0;
+}
+
+.wpcal-eg-gallery-manager {
+    margin-top: 12px;
+}
+
+.wpcal-eg-gallery-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.wpcal-eg-subtitle {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.wpcal-eg-photo-counter {
+    display: inline-block;
+    background: #e7f3ff;
+    color: #0c5460;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+}
+
+.wpcal-eg-gallery-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* ==========================================================================
+   Thumbnail Grid & Drag-and-Drop
+   ========================================================================== */
+.wpcal-eg-thumbnail-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+    gap: 12px;
+    list-style: none;
+    margin: 16px 0 0 0;
+    padding: 0;
+    min-height: 120px;
+}
+
+.wpcal-eg-thumb-item {
+    position: relative;
+    cursor: grab;
+    background: #ffffff;
+    border: 1px solid #dcdcde;
+    border-radius: 6px;
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.wpcal-eg-thumb-item:active {
+    cursor: grabbing;
+}
+
+.wpcal-eg-thumb-item.ui-sortable-helper {
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
+    z-index: 100;
+}
+
+.wpcal-eg-thumb-item.ui-sortable-placeholder {
+    visibility: visible !important;
+    background: #f0f6fc;
+    border: 2px dashed #388bfd;
+    min-height: 110px;
+}
+
+.wpcal-eg-thumb-card {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%;
+    background: #f0f0f1;
+}
+
+.wpcal-eg-thumb-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.wpcal-eg-thumb-remove {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    background: rgba(214, 54, 56, 0.9);
+    color: #ffffff;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.15s ease;
+    padding: 0;
+    z-index: 5;
+}
+
+.wpcal-eg-thumb-remove:hover {
+    background: #b32d2e;
+    transform: scale(1.1);
+}
+
+.wpcal-eg-thumb-remove .dashicons {
+    font-size: 16px;
+    width: 16px;
+    height: 16px;
+}
+
+.wpcal-eg-thumb-item:hover .wpcal-eg-thumb-remove,
+.wpcal-eg-thumb-item:focus-within .wpcal-eg-thumb-remove {
+    opacity: 1;
+}
+
+.wpcal-eg-thumb-handle {
+    position: absolute;
+    bottom: 4px;
+    left: 4px;
+    width: 22px;
+    height: 22px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #ffffff;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.wpcal-eg-thumb-handle .dashicons {
+    font-size: 14px;
+    width: 14px;
+    height: 14px;
+}
+
+.wpcal-eg-thumb-item:hover .wpcal-eg-thumb-handle {
+    opacity: 1;
+}
+
+/* Empty State */
+.wpcal-eg-empty-state {
+    text-align: center;
+    padding: 36px 20px;
+    background: #f9f9f9;
+    border: 2px dashed #dcdcde;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+.wpcal-eg-empty-state p {
+    color: #646970;
+    margin: 8px 0 0 0;
+    font-size: 14px;
+}
+
+/* ==========================================================================
+   Sidebar Metabox Overrides
+   ========================================================================== */
+.wpcal-eg-side-field {
+    margin-bottom: 14px;
+}
+
+.wpcal-eg-side-field:last-child {
+    margin-bottom: 0;
+}
+
+.wpcal-eg-side-field label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 12px;
+}
+
+.wpcal-eg-side-field .description {
+    margin-top: 4px;
+    font-size: 11px;
+}
+
+/* ==========================================================================
+   Admin List Table Custom Columns
+   ========================================================================== */
+.wpcal-eg-admin-list-thumb {
+    width: 48px;
+    height: 48px;
+    object-fit: cover;
+    border-radius: 4px;
+    border: 1px solid #dcdcde;
+    display: block;
+}
+
+.wpcal-eg-list-no-cover {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    background: #f0f0f1;
+    color: #a7aaad;
+    border-radius: 4px;
+    border: 1px solid #dcdcde;
+}
+
+.wpcal-eg-count-badge {
+    display: inline-block;
+    background: #f0f0f1;
+    color: #1d2327;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 12px;
+}
+
+.wpcal-eg-copyable-code {
+    background: #f6f7f7;
+    border: 1px solid #dcdcde;
+    padding: 3px 6px;
+    border-radius: 4px;
+    font-size: 11px;
+    cursor: pointer;
+    user-select: all;
+    transition: background 0.15s ease;
+}
+
+.wpcal-eg-copyable-code:hover {
+    background: #e7f3ff;
+    border-color: #72aee6;
+}

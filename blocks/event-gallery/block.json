@@ -1,0 +1,43 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "wpcalibrate/event-gallery",
+  "version": "1.0.0",
+  "title": "WPCalibrate Event Gallery",
+  "category": "media",
+  "icon": "format-gallery",
+  "description": "Display an event-specific photo gallery with responsive grid or masonry layouts.",
+  "keywords": [
+    "event",
+    "gallery",
+    "photos",
+    "wpcalibrate"
+  ],
+  "textdomain": "wpcalibrate-event-galleries",
+  "attributes": {
+    "galleryId": {
+      "type": "string",
+      "default": "0"
+    },
+    "layout": {
+      "type": "string",
+      "default": ""
+    },
+    "columnsDesktop": {
+      "type": "number",
+      "default": 0
+    },
+    "columnsTablet": {
+      "type": "number",
+      "default": 0
+    },
+    "columnsMobile": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  }
+}
